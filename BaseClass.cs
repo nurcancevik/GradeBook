@@ -8,14 +8,14 @@ namespace GradeBook
 {
     class BaseClass
     {
-        public static double GetGradeFromConsole()
+        public static double? GetGradeFromConsole()
         {
             var gradeStr = Console.ReadLine();
             double? grade = string.IsNullOrEmpty(gradeStr) ? null : Convert.ToDouble(gradeStr);
             grade ??= 0;
             return grade;
         }
-        public static double GetGradeAverage()
+        public static double? GetGradeAverage()
         {
             Console.WriteLine("Lütfen İlk Sınav Notunuzu Girin");
             var grade1 = GetGradeFromConsole();

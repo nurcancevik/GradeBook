@@ -19,7 +19,7 @@ namespace GradeBook
             Console.WriteLine("*************************");
         }
 
-        private static void GetControl3(double average)
+        private static void GetControl3(double? average)
         {
             if (average >= 75)
             {
@@ -31,7 +31,7 @@ namespace GradeBook
             }
         }
 
-        private static void GetControl2(double average)
+        private static void GetControl2(double? average)
         {
             if (average >= 85)
             {
@@ -47,7 +47,7 @@ namespace GradeBook
             }
         }
 
-        private static void GetControl1(double average)
+        private static void GetControl1(double? average)
         {
             if (average >= 75)
             {

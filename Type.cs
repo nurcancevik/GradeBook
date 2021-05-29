@@ -26,7 +26,9 @@ namespace GradeBook
             CanSetNameFromReference2();
             CanSetNameFromReference3();
         }
-
+        /// <summary>
+        /// İki değişken aynı nesneyi referans edere örnek verir
+        /// </summary>
         private void TwoVarsCanReferenceSameObject()
         {
             var book1 = GetBook("Book 1", 80);
@@ -36,7 +38,9 @@ namespace GradeBook
             Console.WriteLine($"Öğrenci1 - {book1.Name} -->> {book1.Grade}");
             Console.WriteLine($"Öğrenci1 - {book2.Name} -->> {book2.Grade}");
         }
-
+        /// <summary>
+        /// new ile türetilen nesneler farklı nesnelerdir e örnek verir
+        /// </summary>
         private void GetBookReturnsDifferentObjects()
         {
             var book1 = GetBook("Book 1", 80);
@@ -46,7 +50,6 @@ namespace GradeBook
             Console.WriteLine($"Öğrenci1 - {book1.Name} -->> {book1.Grade}");
             Console.WriteLine($"Öğrenci1 - {book2.Name} -->> {book2.Grade}");
         }
-
         private void GetVariableDeclaration()
         {
             double grade1 = 80.5;
@@ -58,14 +61,12 @@ namespace GradeBook
             Console.WriteLine($"Öğrenci2 - {grade2}");
             Console.WriteLine($"Not Ortalaması - {average}");
         }
-
         private static void CanSetNameFromReference3()
         {
             var book1 = GetBook("Book 1", 80);
             GetBookSetName(ref book1, "New Name");
             Console.WriteLine(book1.Name);
         }
-
         private static void CanSetNameFromReference2()
         {
             var book1 = GetBook("Book 1", 80);
@@ -82,14 +83,12 @@ namespace GradeBook
             book = new Book(name, 0);
             Console.WriteLine(book.Name);
         }
-
         private static void CanSetNameFromReference()
         {
             var book1 = GetBook("Book 1", 80);
             SetName(book1, "New Name");
             Console.WriteLine(book1.Name);
         }
-
         static Book GetBook(string name, double grade)
         {
             Book book = new Book(name, grade);
@@ -99,27 +98,23 @@ namespace GradeBook
         {
             book1.Name = name;
         }
-
         private static void PassByValueUsingRef()
         {
             double higherGrade = 90.6;
             CanChangeHigherGradeFromValue(ref higherGrade);
             Console.WriteLine(higherGrade);
         }
-
         private static void PassByValue()
         {
             double higherGrade = 90.6;
             CanChangeHigherGradeFromValue(higherGrade);
             Console.WriteLine(higherGrade);
         }
-
         private static void CanChangeHigherGradeFromValue(double grade)
         {
             grade = 100;
             Console.WriteLine(grade);
         }
-
         private static void CanChangeHigherGradeFromValue(ref double grade)
         {
             grade = 100;

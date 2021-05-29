@@ -19,7 +19,6 @@ namespace GradeBook
             GetSCNewVersion3();
             GetSCNewVersion4();
         }
-
         private static void GetSCNewVersion4()
         {
             var average = GetGradeAverage();
@@ -33,7 +32,6 @@ namespace GradeBook
             };
             Console.WriteLine(gradeStatus);
         }
-
         private static void GetSCNewVersion3()
         {
             var book = GetBookInfoFromConsole();
@@ -49,7 +47,6 @@ namespace GradeBook
 
             Console.WriteLine(gradeStatus);
         }
-
         private static void GetSCNewVersion2()
         {
             var book = GetBookInfoFromConsole();
@@ -62,7 +59,6 @@ namespace GradeBook
             };
             Console.WriteLine(gradeStatus);
         }
-
         private static void GetSCNewVersion()
         {
             var book = GetBookInfoFromConsole();
@@ -75,7 +71,6 @@ namespace GradeBook
             };
             Console.WriteLine(gradeStatus);
         }
-
         public static void GetSCObjeExample2()
         {
             var book = GetBookInfoFromConsole();

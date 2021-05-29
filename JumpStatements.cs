@@ -8,6 +8,9 @@ namespace GradeBook
 {
     public class JumpStatements
     {
+        /// <summary>
+        /// break kullanımına örnek verir
+        /// </summary>
         public static void GetBreakStatement()
         {
             var studentCount = Loops.GetStudentCount();
@@ -26,6 +29,9 @@ namespace GradeBook
             }
             Loops.GetGradeStatistics(totalGrade, studentCount);
         }
+        /// <summary>
+        /// continue kullanımına örnek verir
+        /// </summary>
         public static void GetContinueStatement()
         {
             var studentCount = Loops.GetStudentCount();
@@ -46,6 +52,9 @@ namespace GradeBook
             Loops.GetGradeStatistics(totalGrade, studentCount);
 
         }
+        /// <summary>
+        /// GoTo kullanımına örnek verir
+        /// </summary>
         public static void GetGoToStatement()
         {
             var studentCount = Loops.GetStudentCount();
@@ -65,6 +74,9 @@ namespace GradeBook
         summary:
             Console.WriteLine("********************************");
         }
+        /// <summary>
+        /// return kullanımına örnek verir
+        /// </summary>
         public static void GetReturnStatement()
         {
             var studentCount = Loops.GetStudentCount();
@@ -79,6 +91,11 @@ namespace GradeBook
             Loops.GetGradeStatistics(totalGrade, studentCount);
 
         }
+        /// <summary>
+        /// 100 den büyük girilen notlar için sıfır, diğer durumlarda notun kendisini döner
+        /// </summary>
+        /// <param name="grade"></param>
+        /// <returns></returns>
         public static double ControlGrade(double grade)
         {
             if (grade > 100)

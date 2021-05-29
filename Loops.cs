@@ -8,6 +8,9 @@ namespace GradeBook
 {
     class Loops
     {
+        /// <summary>
+        /// for kullanımına örnek verir
+        /// </summary>
         public static void GetForLoop()
         {
             var studentCount = GetStudentCount();
@@ -20,6 +23,9 @@ namespace GradeBook
             }
             GetGradeStatistics(totalGrade, studentCount);
         }
+        /// <summary>
+        /// while kullanımına örnek verir
+        /// </summary>
         public static void GetWhileLoop()
         {
             var studentCount = GetStudentCount();
@@ -34,6 +40,9 @@ namespace GradeBook
             }
             GetGradeStatistics(totalGrade, studentCount);
         }
+        /// <summary>
+        /// do while kullanımına örnek verir
+        /// </summary>
         public static void GetDoWhileLoop()
         {
             var studentCount = GetStudentCount();
@@ -48,6 +57,9 @@ namespace GradeBook
             } while (counter <= studentCount);
             GetGradeStatistics(totalGrade, studentCount);
         }
+        /// <summary>
+        /// foreach kullanımına örnek verir
+        /// </summary>
         public static void GetForEachLoop()
         {
             var studentCount = GetStudentCount();
@@ -70,11 +82,21 @@ namespace GradeBook
             }
             GetGradeStatistics(totalGrade, studentCount, gradeStr);
         }
+        /// <summary>
+        /// Konsoldan sınıf mevcudunu alır
+        /// </summary>
+        /// <returns></returns>
         public static int GetStudentCount()
         {
             Console.WriteLine("Lütfen Sınıf Mevcudunu Giriniz..");
             return Convert.ToInt32(Console.ReadLine());
         }
+        /// <summary>
+        /// Not bilgilerini ekrana yazar
+        /// </summary>
+        /// <param name="totalGrade"></param>
+        /// <param name="studentCount"></param>
+        /// <param name="gradeStr"></param>
         public static void GetGradeStatistics(double totalGrade, int studentCount, string gradeStr = "")
         {
             var average = Math.Round(totalGrade / studentCount, 2);

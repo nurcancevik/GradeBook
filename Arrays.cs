@@ -26,7 +26,6 @@ namespace GradeBook
             // Dizi Tanımlama ve Değer Atama 4
             double[] grades4 = new double[] { 70.5, 59, 89.4 };
         }
-
         /// <summary>
         /// Dizinin Elemanlarına Erişim
         /// </summary>
@@ -38,7 +37,6 @@ namespace GradeBook
                 Console.WriteLine(grades[i]);
             }
         }
-
         /// <summary>
         /// // Tek Boyutlu Dizi Tanımlama
         /// </summary>
@@ -47,7 +45,6 @@ namespace GradeBook
             int[] dizi = new int[3] { 1, 2, 3 };
 
         }
-
         /// <summary>
         /// // Çok Boyutlu Dizi Tanımlama
         /// </summary>
@@ -60,7 +57,6 @@ namespace GradeBook
             int[,,] dizi3D = new int[2, 2, 3] { { { 1, 2, 3 }, { 4, 5, 6 } },
                                        { { 7, 8, 9 }, { 10, 11, 12 } } };
         }
-
         /// <summary>
         /// Düzensiz Boyutlu Dizi Tanımlama
         /// </summary>
@@ -72,8 +68,7 @@ namespace GradeBook
                 new int[] { 0, 2, 4, 6 },
                 new int[] { 11, 22 }
             };
-        }
-        
+        }   
         /// <summary>
         /// Sık Kullanılan Dizi Propertyleri
         /// </summary>

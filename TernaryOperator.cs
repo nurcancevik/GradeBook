@@ -13,7 +13,6 @@ namespace GradeBook
             GetTernaryOperatorExample1();
             GetTernaryOperatorExample2();
         }
-
         private static void GetTernaryOperatorExample2()
         {
             var average = GetGradeAverage();
@@ -21,7 +20,6 @@ namespace GradeBook
                 : average >= 75 && average < 85 ? "Başarılı"
                 : "Başarısız";
         }
-
         private static void GetTernaryOperatorExample1()
         {
             var average = GetGradeAverage();

@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace GradeBook
 {
-    class BaseClass
+    public class BaseClass
     {
+        /// <summary>
+        /// Konsoldan girilen not bilgisini alır
+        /// </summary>
+        /// <returns></returns>
         public static double? GetGradeFromConsole()
         {
             var gradeStr = Console.ReadLine();
@@ -15,6 +19,10 @@ namespace GradeBook
             grade ??= 0;
             return grade;
         }
+        /// <summary>
+        /// Konsoldan girilen değerlere göre ortalama hesaplar
+        /// </summary>
+        /// <returns></returns>
         public static double? GetGradeAverage()
         {
             Console.WriteLine("Lütfen İlk Sınav Notunuzu Girin");
@@ -27,7 +35,10 @@ namespace GradeBook
             return average;
 
         }
-
+        /// <summary>
+        /// Konsoldan girilen değerleri Book nesnesine atar
+        /// </summary>
+        /// <returns></returns>
         public static Book GetBookInfoFromConsole()
         {
             var book = new Book();
@@ -36,6 +47,19 @@ namespace GradeBook
             Console.WriteLine("Öğrenci Not Bilgisini Giriniz..");
             book.Grade = Convert.ToDouble(Console.ReadLine());
             return book;
+        }
+        /// <summary>
+        /// Konsoldan girilen değerleri Book nesnesine atar. 
+        /// Yukarıdakinden farkı burada grade alanına not ortalamasını yazarız
+        /// </summary>
+        public static Book GetBookInfo()
+        {
+            var book = new Book();
+            Console.WriteLine("Öğrenci Bilgisi Giriniz..");
+            book.Name = Console.ReadLine();
+            book.Grade = (double)GetGradeAverage();
+            return book;
+
         }
     }
 }

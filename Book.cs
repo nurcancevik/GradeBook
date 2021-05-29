@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GradeBook
 {
-    class Book
+    public class Book
     {
         private string name;
         private double grade;
@@ -37,9 +37,7 @@ namespace GradeBook
                 else grade = value;
             }
         }
-
         public static double Rate { get { return rate; } }
-
         public Book(string name, double grade)
         {
             Name = name;
@@ -48,54 +46,75 @@ namespace GradeBook
         public Book()
         {
         }
+        /// <summary>
+        /// En yüksek notu döner
+        /// </summary>
+        /// <param name="grade1"></param>
+        /// <param name="grade2"></param>
+        /// <param name="grade3"></param>
+        /// <returns></returns>
+        public static double GetHighGrade(double grade1, double grade2, double grade3)
+        {
+            var highGrade = 0.0;
 
-        //public static double GetHighGrade(double grade1, double grade2, double grade3)
-        //{
-        //    var highGrade = 0.0;
+            if (grade1 >= grade2)
+            {
+                highGrade = grade1;
+            }
+            else if (grade2 >= grade3)
+            {
+                highGrade = grade2;
+            }
+            else
+            {
+                highGrade = grade3;
+            }
 
-        //    if (grade1 >= grade2)
-        //    {
-        //        highGrade = grade1;
-        //    }
-        //    else if (grade2 >= grade3)
-        //    {
-        //        highGrade = grade2;
-        //    }
-        //    else
-        //    {
-        //        highGrade = grade3;
-        //    }
+            return highGrade;
+        }
+        /// <summary>
+        /// En düşük notu döner
+        /// </summary>
+        /// <param name="grade1"></param>
+        /// <param name="grade2"></param>
+        /// <param name="grade3"></param>
+        /// <returns></returns>
+        public static double GetLowGrade(double grade1, double grade2, double grade3)
+        {
+            var lowGrade = 0.0;
 
-        //    return highGrade;
-        //}
-        //public static double GetLowGrade(double grade1, double grade2, double grade3)
-        //{
-        //    var lowGrade = 0.0;
+            if (grade1 <= grade2)
+            {
+                lowGrade = grade1;
+            }
+            else if (grade2 <= grade3)
+            {
+                lowGrade = grade2;
+            }
+            else
+            {
+                lowGrade = grade3;
+            }
 
-        //    if (grade1 <= grade2)
-        //    {
-        //        lowGrade = grade1;
-        //    }
-        //    else if (grade2 <= grade3)
-        //    {
-        //        lowGrade = grade2;
-        //    }
-        //    else
-        //    {
-        //        lowGrade = grade3;
-        //    }
+            return lowGrade;
+        }
+        /// <summary>
+        /// Not ortalamasını döner
+        /// </summary>
+        /// <param name="grade1"></param>
+        /// <param name="grade2"></param>
+        /// <param name="grade3"></param>
+        /// <returns></returns>
+        public static double GetAverage(double grade1, double grade2, double grade3)
+        {
+            var average = Math.Round((grade1 + grade2 + grade3) / 3, 2);
+            return average + average * Rate;
+        }
+        public void SetName(string name)
+        {
+            Name = name;
+        }
 
-        //    return lowGrade;
-        //}
-        //public static double GetAverage(double grade1, double grade2, double grade3)
-        //{
-        //    var average = Math.Round((grade1 + grade2 + grade3) / 3, 2);
-        //    return average + average * Rate;
-        //}
-        //public void SetName(string name)
-        //{
-        //    Name = name;
-        //}
     }
 
 }

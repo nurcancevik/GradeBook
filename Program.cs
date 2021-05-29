@@ -7,11 +7,8 @@ namespace GradeBook
     {
         static void Main(string[] args)
         {
-            JumpStatements.GetBreakStatement();
-            JumpStatements.GetContinueStatement();
-            JumpStatements.GetGoToStatement();
-            JumpStatements.GetReturnStatement();
-
+int[] dizi = new int[] { 9, 4, 6, 2, 0, 3 };
+Console.WriteLine(Array.IndexOf(dizi, 2));
         }
     }
 

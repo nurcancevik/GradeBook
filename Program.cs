@@ -7,7 +7,7 @@ namespace GradeBook
     {
         static void Main(string[] args)
         {
-           MethodOverLoading. OverLoadMethod();
+            ParamsKeyword.GetGradeStatistics();
 
         }
     }

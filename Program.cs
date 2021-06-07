@@ -3,13 +3,14 @@ using System.Collections.Generic;
 
 namespace GradeBook
 {
-    class Program
+class Program
+{
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            ParamsKeyword.GetGradeStatistics();
-
-        }
+        Student student = new Student("Emre", "Çevik", 5, 'A');
+        student.PrintStudentInfo();
+   
     }
+}
 
 }
